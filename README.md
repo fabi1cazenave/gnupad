@@ -27,3 +27,4 @@ The “gnupad” idea is to emulate these standard / notepad-like shortcuts in t
  * **nano** is the editor that most beginners use  
    — it’s more than time to use standard shortcuts instead of the pico ones.
 
+WTFPL license. Use at your own risk.
