@@ -6,12 +6,15 @@
 #| Licence       : WTFPL
 #|
 #| This configuration file should bring a Notepad-like behavior to Nano.
-#| The Shift+arrows selection mode is still missing, so we're using the
-#| Emacs-like Ctrl+Space marker.
+#|
+#| Not implemented yet:
+#|   * Shift+arrows selection mode
+#|     (=> use the Emacs-like Ctrl+Space marker instead)
+#|   * Shift+[F3] (= previous search occurrences)
 #|
 #| References:
-#|  man nanorc
-#|  /usr/share/doc/nano/examples/nanorc.sample (or equivalent)
+#|   * man nanorc
+#|   * /usr/share/doc/nano/examples/nanorc.sample (or equivalent)
 #|
 
 ## Notepad-like keybindings
@@ -24,12 +27,13 @@ bind ^Z undo         all
 bind ^Y redo         all
 # find/replace
 bind ^F whereis      main
-bind ^G replace      main
+bind ^H replace      main
+bind ^G searchagain  main
 bind F3 searchagain  main
 # save/quit/help
 bind ^S writeout     all
 bind ^Q exit         all
-bind ^H help         all
+bind F1 help         all
 
 ## Other keybindings
 # Emacs-like mark (shift+arrow won't work)
