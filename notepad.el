@@ -1,7 +1,7 @@
 ;|
 ;| File          : ~/emacs.d/notepad.el
-;| Version       : 0.1
 ;| Last modified : 2011-08-05
+;| Project page  : https://github.com/fabi1cazenave/gnupad
 ;| Author        : Fabien Cazenave
 ;| License       : WTFPL
 ;|
@@ -10,7 +10,9 @@
 ;|
 ;| We're missing [F3] / Shift+[F3] to get the next/previous search occurrences.
 ;| It would be nice if this configuration file could be activated/disactivated
-;| along with cua-mode.  If you know how to do that, please ping me.
+;| along with cua-mode.  If you know how to do that, please ping me!
+;|
+;| The undo/redo stack still sucks! This is the main issue we have to solve.
 ;|
 
 ;; CUA-Mode brings C-[z|x|c|v] shortcuts

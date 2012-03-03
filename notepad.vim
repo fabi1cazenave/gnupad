@@ -1,8 +1,12 @@
 "|
 "| File          : ~/.vim/plugin/notepad.vim
 "| Last modified : 2012-03-02
+"| Project page  : https://github.com/fabi1cazenave/gnupad
 "| Author        : Fabien Cazenave
 "| Licence       : WTFPL
+"|
+"| This configuration file should bring a Notepad-like behavior to Vim.
+"| It mostly relies on the built-in "mswin.vim" configuration.
 "|
 
 " Use Ctrl-Q to quit and Ctrl+Shift+V for visual block selection
