@@ -5,6 +5,8 @@
 #| Licence       : WTFPL
 #|
 #| This configuration file should bring a Notepad-like behavior to Nano.
+#| The Shift+arrows selection mode is still missing, so we're using the
+#| Emacs-like Ctrl+Space marker.
 #|
 #| References:
 #|  man nanorc

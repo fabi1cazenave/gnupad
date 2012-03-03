@@ -13,14 +13,14 @@ Because some keyboard shortcuts should **always** be standard:
 
         • <kbd>Ctrl+f</kbd> find…  
         • <kbd>Ctrl+g</kbd> find and replace…  
-        • <kbd>F3</kbd> next  
-        • <kbd>Shift+F3</kbd> previous  
+        • <kbd>F3</kbd> <kbd>Shift+F3</kbd> next / previous  
 
 The “gnupad” idea is to emulate these standard / notepad-like shortcuts in the three main CLI editors:
 
  * **Emacs** now implements a [CUA mode](http://www.emacswiki.org/CuaMode)
    but it only affects <kbd>Ctrl+[z|x|c|v]</kbd>  
-   — ``notepad.el`` adds support for the other shortcuts;
+   — ``notepad.el`` adds support for the other shortcuts and for
+   <kbd>Shift+[arrow]</kbd> selections;
  * **Vim** has a Notepad-like mode with ``vim -e`` or
    [Cream](http://cream.sourceforge.net/)  
    — but you might want to use standard shortcuts in the regular Vim, too;
@@ -28,3 +28,4 @@ The “gnupad” idea is to emulate these standard / notepad-like shortcuts in t
    — it’s more than time to use standard shortcuts instead of the pico ones.
 
 WTFPL license. Use at your own risk.
+

@@ -7,15 +7,10 @@
 ;|
 ;| This configuration file should bring a Notepad-like behavior to Emacs.
 ;| It reuses a small subset of ErgoEmacs but tries to remain as simple as possible.
-;| It's designed for Emacs haters -- and certainly not for advanced Emacs users.
 ;|
 ;| We're missing [F3] / Shift+[F3] to get the next/previous search occurrences.
 ;| It would be nice if this configuration file could be activated/disactivated
-;| along with cua-mode.
-;| If you know how to do that, please ping me.
-;|
-;| I'd also like to have a few Notepad++ features, too -- e.g. tabs.
-;| That could be another configuration file, though.
+;| along with cua-mode.  If you know how to do that, please ping me.
 ;|
 
 ;; CUA-Mode brings C-[z|x|c|v] shortcuts
