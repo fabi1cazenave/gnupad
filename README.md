@@ -1,4 +1,4 @@
-Because some keyboard shortcuts should **always** be standard!
+Every time one of the shortcuts below does something else than the Notepad equivalent, God kills a kitten.
 
 Basic shortcuts
 ---------------
@@ -20,8 +20,6 @@ Basic shortcuts
 
 The gnupad manifesto
 --------------------
-
-Every time one of the shortcuts above does something else than the Notepad equivalent, God kills a kitten.
 
 The “gnupad” idea is to save kittens by emulating these standard / Notepad-like shortcuts in the three main CLI editors:
 
