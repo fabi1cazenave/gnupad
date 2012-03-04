@@ -1,18 +1,18 @@
 Because some keyboard shortcuts should **always** be standard:
 
-        • <kbd>Ctrl+x</kbd> cut  
-        • <kbd>Ctrl+c</kbd> copy  
-        • <kbd>Ctrl+v</kbd> paste  
+        • <kbd>Ctrl+X</kbd> cut  
+        • <kbd>Ctrl+C</kbd> copy  
+        • <kbd>Ctrl+V</kbd> paste  
 
-        • <kbd>Ctrl+z</kbd> undo  
-        • <kbd>Ctrl+y</kbd> redo  
+        • <kbd>Ctrl+Z</kbd> undo  
+        • <kbd>Ctrl+Y</kbd> redo  
 
-        • <kbd>Ctrl+o</kbd> open…  
-        • <kbd>Ctrl+s</kbd> save  
-        • <kbd>Ctrl+q</kbd> quit  
+        • <kbd>Ctrl+O</kbd> open…  
+        • <kbd>Ctrl+S</kbd> save  
+        • <kbd>Ctrl+Q</kbd> quit  
 
-        • <kbd>Ctrl+f</kbd> find…  
-        • <kbd>Ctrl+h</kbd> find and replace…  
+        • <kbd>Ctrl+F</kbd> find…  
+        • <kbd>Ctrl+H</kbd> find and replace…  
         • <kbd>F3</kbd> <kbd>Shift+F3</kbd> next / previous  
 
 The “gnupad” idea is to emulate these standard / notepad-like shortcuts in the three main CLI editors:
