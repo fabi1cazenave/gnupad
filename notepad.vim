@@ -1,6 +1,6 @@
 "|
 "| File          : ~/.vim/plugin/notepad.vim
-"| Last modified : 2012-03-02
+"| Last modified : 2012-03-04
 "| Project page  : https://github.com/fabi1cazenave/gnupad
 "| Author        : Fabien Cazenave
 "| Licence       : WTFPL
@@ -20,7 +20,15 @@ source $VIMRUNTIME/mswin.vim
 noremap <C-q> ZZ
 noremap <C-b> <C-v>
 
-" Bonus: easy open/find/replace
+" Next/previous with F3/Shift-F3
+noremap  <F3> n
+vnoremap <F3> <C-c>n
+inoremap <F3> <C-o>n
+noremap  <S-F3> N
+vnoremap <S-F3> <C-c>N
+inoremap <S-F3> <C-o>N
+
+" Easy open/find/replace
 if has('gui_running')
   " open
   noremap  <C-o>      :browse open<CR>
@@ -45,7 +53,11 @@ else
   inoremap <C-f> <C-o>/
 endif
 
-" Bonus: +1|-1 with Ctrl-[j|k] (since Ctrl-a and Ctrl-x have be redefined...)
+" +1|-1 with Ctrl-[j|k] (since Ctrl-a and Ctrl-x have be redefined...)
 noremap <C-j> <C-x>
 noremap <C-k> <C-a>
+
+" Other recommended settings
+"set nocompatible   " required for a multi-level undo/redo stack
+"set mouse=a        " enables mouse selection
 

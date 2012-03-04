@@ -17,8 +17,8 @@
 
 ;; CUA-Mode brings C-[z|x|c|v] shortcuts
 (cua-mode 1)
-(require 'redo "redo.elc" t) ; for redo shortcut
-(global-set-key (kbd "C-S-z") 'redo)
+;(require 'redo "redo.elc" t) ; for redo shortcut
+;(global-set-key (kbd "C-y") 'redo)
 
 ;; Notepad-like shortcuts
 (defun close-frame ()
