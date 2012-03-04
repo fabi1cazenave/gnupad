@@ -8,29 +8,34 @@
 #| This configuration file should bring a Notepad-like behavior to Nano.
 #|
 #| Not implemented yet:
+#|   * Ctrlt+arrows caret movements
 #|   * Shift+arrows selection mode
 #|     (=> use the Emacs-like Ctrl+Space marker instead)
 #|   * Shift+[F3] (= previous search occurrences)
 #|
 #| References:
 #|   * man nanorc
-#|   * /usr/share/doc/nano/examples/nanorc.sample (or equivalent)
+#|   * /usr/share/doc/nano/examples/nanorc.sample.gz (or equivalent)
 #|
 
-## Notepad-like keybindings
-# cut/copy/paste
+## cut/copy/paste
 bind ^X cut          main
 bind ^C copytext     main
 bind ^V uncut        main
-# undo/redo
+
+## undo/redo (still experimental/buggy on nano 2.2.x)
+set undo
 bind ^Z undo         all
 bind ^Y redo         all
-# find/replace
+
+## find/replace (shift+F3 still missing)
 bind ^F whereis      main
 bind ^H replace      main
 bind ^G searchagain  main
 bind F3 searchagain  main
-# save/quit/help
+
+## save/quit/help (requires to ignore XON/XOFF keys)
+unset preserve
 bind ^S writeout     all
 bind ^Q exit         all
 bind F1 help         all
