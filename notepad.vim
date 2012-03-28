@@ -8,17 +8,27 @@
 "| This configuration file should bring a Notepad-like behavior to Vim.
 "| It mostly relies on the built-in "mswin.vim" configuration.
 "|
-"| Note: Ctrl-S and Ctrl-Q are disabled on a few terminals (= xon/xoff)
-"|       like xterm, but they always work on gVim.
+"| Note: Ctrl-S and Ctrl-Q might be disabled in your terminal emulator
+"|       (= XON/XOFF). You can add this to your ~/.bashrc to prevent it:
+"|           stty -ixon
 "|
 
-" The so-called "MS-Windows compatibility" settings are loaded by default on
-" MS-Windows, but have to be loaded explicitely on other OSes.
+" The so-called "MS-Windows compatibility" settings...
+"   * are loaded by default on MS-Windows;
+"   * are useless on OSX -- at least with MacVim;
+"   * have to be loaded explicitely on other *NIXes.
 source $VIMRUNTIME/mswin.vim
 
-" Only difference: Ctrl-Q to quit and Ctrl+B for visual block selection
-noremap <C-q> ZZ
-noremap <C-b> <C-v>
+" Recommended settings:
+"set nocompatible   " required for a multi-level undo/redo stack
+"set mouse=a        " enables mouse selection
+
+" Main difference: Ctrl-Q = quit, Ctrl+B = visual block selection
+noremap  <C-q> ZZ
+vnoremap <C-q> <Esc>ZZ
+inoremap <C-q> <Esc>ZZ
+noremap  <C-b> <C-v>
+vnoremap <C-b> <C-v>
 
 " Next/previous with F3/Shift-F3
 noremap  <F3> n
@@ -53,11 +63,56 @@ else
   inoremap <C-f> <C-o>/
 endif
 
-" +1|-1 with Ctrl-[j|k] (since Ctrl-a and Ctrl-x have be redefined...)
+" Allow nobreak-space in insert|cmdline modes
+if has('gui')
+  iunmap <M-Space>
+  cunmap <M-Space>
+endif
+
+" Ctrl-A and Ctrl-X have been redefined => +1/-1 with Ctrl-J/K
 noremap <C-j> <C-x>
 noremap <C-k> <C-a>
 
-" Other recommended settings
-"set nocompatible   " required for a multi-level undo/redo stack
-"set mouse=a        " enables mouse selection
+" Bonus: word-by-word caret movements
+"finish
+
+" Ctrl+arrow/backspace/delete
+inoremap <C-BackSpace> <C-o>db
+vnoremap <C-BackSpace> <C-c>db
+inoremap <C-Delete>    <C-o>dw
+vnoremap <C-Delete>    <C-c>dw
+inoremap <C-Left>      <C-o>b
+vnoremap <C-Left>      <C-c>b
+inoremap <C-Right>     <C-o>w
+vnoremap <C-Right>     <C-c>w
+inoremap <C-Up>        <C-o>{
+vnoremap <C-Up>        <C-c>{
+inoremap <C-Down>      <C-o>}
+vnoremap <C-Down>      <C-c>}
+
+" Alt+arrow/backspace/delete -- meta sets the 8th bit
+inoremap <M-BackSpace> <C-o>db
+inoremap <M-Delete>    <C-o>dw
+inoremap <M-Left>      <C-o>b
+inoremap <M-Right>     <C-o>w
+inoremap <M-Up>        <C-o>{
+inoremap <M-Down>      <C-o>}
+
+map <M-Left>  B
+map <M-Right> W
+map <M-Up>    {
+map <M-Down>  }
+
+" Alt+arrow/backspace/delete -- meta sends escape
+inoremap <Esc><BackSpace> <C-o>db
+inoremap <Esc><Delete>    <C-o>dw
+inoremap <Esc><Left>      <C-o>b
+inoremap <Esc><Right>     <C-o>w
+inoremap <Esc><Up>        <C-o>{
+inoremap <Esc><Down>      <C-o>}
+
+map <Esc><Left>  B
+map <Esc><Right> W
+map <Esc><Up>    {
+map <Esc><Down>  }
 
